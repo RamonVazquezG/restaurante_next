@@ -5,22 +5,22 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../generated/prisma"
+  output   = "../app/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
 }
 
-model Category {
-  id Int @id @default(autoincrement())
+model Category{
+  id  Int @id   @default(autoincrement())
   name String
-  slug String
+  slug  String
   products Product[]
 }
 
 model Product {
-  id Int @id @default(autoincrement())
+  id Int  @id   @default(autoincrement())
   name String
   price Float
   image String
